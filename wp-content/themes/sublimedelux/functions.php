@@ -4,7 +4,7 @@
 define('SDT_THEME_PATH', get_template_directory());
 define('SDT_THEME_URL', get_template_directory_uri());
 
-
+require_once(SDT_THEME_PATH . '/rtextend/cpt/product.php');
 
 add_action( 'wp_enqueue_scripts', 'sdt_replace_core_jquery_version' );
 
@@ -47,3 +47,8 @@ function sdt_show_theme_image($image){
 	echo SDT_THEME_URL . '/images/' . $image;
 }
 
+add_action( 'after_setup_theme', 'sdt_after_setup_theme' );
+
+function sdt_after_setup_theme() {
+	add_theme_support('post-thumbnails');
+}
