@@ -4,6 +4,9 @@
  * Template Name: Product Template
  */
 get_header(); ?>
+
+
+
 <div class="products">
 		<div class="container">
 			
@@ -11,28 +14,34 @@ get_header(); ?>
 				<div class="col">
 					
 					<div class="product_grid">
-
-						<div class="product">
-							<div class="product_image"><img src="images/product_3.jpg" alt=""></div>
-							<div class="product_content">
-								<div class="product_title"><a href="product.html">Smart Phone</a></div>
-								<div class="product_price">$710</div>
+	
+					<?php 
+					$the_query = get_customposts(-1, 'product'); // for all post
+					if ($the_query->have_posts()) :
+	                    while ($the_query->have_posts()) : $the_query->the_post(); $post_id = get_the_ID();
+	                        ?>
+	                        <div class="product">
+	                        	<a href="<?php the_permalink() ?>">
+									<div class="product_image" 
+									style="background-image: url('<?php echo sdt_get_post_thumbnail($post_id); ?>')"></div>
+								</a>
+								<div class="product_content">
+									<div class="product_title">
+									<a href="<?php the_permalink() ?>"><?php the_title(); ?></a></div>
+								</div>
 							</div>
-						</div>
+	                        <?php
+	                    endwhile;
+	                else:
+	                    ?>
+	                    <p><?php _e('Sorry, no products avaialable.'); ?></p>
+	                <?php endif; ?>
 
-					</div>
-					<div class="product_pagination">
-						<ul>
-							<li class="active"><a href="#">01.</a></li>
-							<li><a href="#">02.</a></li>
-							<li><a href="#">03.</a></li>
-						</ul>
-					</div>
-						
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
 	
 	
-<?php get_footer(); ?>
+<?php get_footer("page"); ?>

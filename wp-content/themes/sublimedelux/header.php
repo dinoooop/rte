@@ -15,7 +15,7 @@
 				<div class="row">
 					<div class="col">
 						<div class="header_content d-flex flex-row align-items-center justify-content-start">
-							<div class="logo"><a href="<?php home_url(); ?>">Sublime.</a></div>
+							<div class="logo"><a href="<?php echo home_url(); ?>">Sublime.</a></div>
 							<nav class="main_nav">
 								<ul>
 									<li class="hassubs active">
@@ -163,4 +163,5 @@
 			</ul>
 		</div>
 	</div>
+	<div class="header_overlay"></div>
 
