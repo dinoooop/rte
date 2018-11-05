@@ -83,3 +83,13 @@ function sdt_get_post_thumbnail($post_id){
 function sdt_is_page($title){
 	return get_the_title() == $title;
 }
+
+function get_all_category(){
+	$categories = get_terms('product_category');
+	return $categories;
+}
+
+function execute_test_page( $atts ) {
+	get_all_category();
+}
+add_shortcode( 'test_page', 'execute_test_page' );
