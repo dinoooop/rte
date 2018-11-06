@@ -20,7 +20,7 @@
 							<div class="header_extra ml-auto">
 								<nav class="main_nav">
 								<ul>
-									<li class="hassubs active">
+									<li>
 										<a href="<?php echo home_url(); ?>">Home</a>
 									</li>
 									<li class="hassubs">
@@ -31,9 +31,9 @@
 											<li><a href="categories.html">Refrigeration</a></li>
 										</ul>
 									</li>
-									<li><a href="#">About</a></li>
-									<li><a href="#">Career</a></li>
-									<li><a href="contact.html">Contact</a></li>
+									<li><a href="<?php echo site_url("about")?>">About</a></li>
+									<li><a href="<?php echo site_url("career")?>">Career</a></li>
+									<li><a href="<?php echo site_url("contact")?>">Contact</a></li>
 								</ul>
 							</nav>
 								
@@ -83,28 +83,30 @@
 					</form>
 				</div>
 				<ul class="page_menu_nav menu_mm">
-					<li class="page_menu_item has-children menu_mm">
-						<a href="index.html">Home<i class="fa fa-angle-down"></i></a>
-						<ul class="page_menu_selection menu_mm">
-							<li class="page_menu_item menu_mm"><a href="categories.html">Categories<i class="fa fa-angle-down"></i></a></li>
-							<li class="page_menu_item menu_mm"><a href="product.html">Product<i class="fa fa-angle-down"></i></a></li>
-							<li class="page_menu_item menu_mm"><a href="cart.html">Cart<i class="fa fa-angle-down"></i></a></li>
-							<li class="page_menu_item menu_mm"><a href="checkout.html">Checkout<i class="fa fa-angle-down"></i></a></li>
-							<li class="page_menu_item menu_mm"><a href="contact.html">Contact<i class="fa fa-angle-down"></i></a></li>
-						</ul>
+					<li class="page_menu_item menu_mm">
+						<a href="<?php echo home_url(); ?>">Home</a>
 					</li>
 					<li class="page_menu_item has-children menu_mm">
-						<a href="categories.html">Categories<i class="fa fa-angle-down"></i></a>
+						<a href="categories.html">Spare Parts<i class="fa fa-angle-down"></i></a>
 						<ul class="page_menu_selection menu_mm">
-							<li class="page_menu_item menu_mm"><a href="categories.html">Category<i class="fa fa-angle-down"></i></a></li>
-							<li class="page_menu_item menu_mm"><a href="categories.html">Category<i class="fa fa-angle-down"></i></a></li>
-							<li class="page_menu_item menu_mm"><a href="categories.html">Category<i class="fa fa-angle-down"></i></a></li>
-							<li class="page_menu_item menu_mm"><a href="categories.html">Category<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="categories.html">Automotive<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="categories.html">Heavy Equipment<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="categories.html">Refrigeration<i class="fa fa-angle-down"></i></a></li>
+							
 						</ul>
 					</li>
-					<li class="page_menu_item menu_mm"><a href="index.html">Accessories<i class="fa fa-angle-down"></i></a></li>
-					<li class="page_menu_item menu_mm"><a href="#">Offers<i class="fa fa-angle-down"></i></a></li>
-					<li class="page_menu_item menu_mm"><a href="contact.html">Contact<i class="fa fa-angle-down"></i></a></li>
+
+					
+					
+					<li class="page_menu_item menu_mm">
+						<a href="<?php echo site_url("about")?>">About</a>
+					</li>
+					<li class="page_menu_item menu_mm">
+						<a href="<?php echo site_url("career")?>">Career</a>
+					</li>
+					<li class="page_menu_item menu_mm">
+						<a href="<?php echo site_url("contact")?>">Contact</a>
+					</li>
 				</ul>
 			</div>
 		</div>
