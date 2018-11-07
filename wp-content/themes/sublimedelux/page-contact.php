@@ -9,7 +9,7 @@ get_header(); ?>
 
 <!-- Contact -->
 	
-	<div class="contact">
+	<div class="sdt-page">
 		<div class="container">
 			<div class="row">
 
@@ -19,30 +19,7 @@ get_header(); ?>
 						<div class="section_title">Get in Touch</div>
 						<div class="section_subtitle">Say hello</div>
 						<div class="contact_form_container">
-							<form action="#" id="contact_form" class="contact_form">
-								<div class="row">
-									<div class="col-xl-6">
-										<!-- Name -->
-										<label for="contact_name">First Name*</label>
-										<input type="text" id="contact_name" class="contact_input" required="required">
-									</div>
-									<div class="col-xl-6 last_name_col">
-										<!-- Last Name -->
-										<label for="contact_last_name">Last Name*</label>
-										<input type="text" id="contact_last_name" class="contact_input" required="required">
-									</div>
-								</div>
-								<div>
-									<!-- Subject -->
-									<label for="contact_company">Subject</label>
-									<input type="text" id="contact_company" class="contact_input">
-								</div>
-								<div>
-									<label for="contact_textarea">Message*</label>
-									<textarea id="contact_textarea" class="contact_input contact_textarea" required="required"></textarea>
-								</div>
-								<button class="button contact_button"><span>Send Message</span></button>
-							</form>
+							<?php echo do_shortcode('[contact-form-7 id="23" title="main contact"]'); ?>
 						</div>
 					</div>
 				</div>
@@ -61,20 +38,7 @@ get_header(); ?>
 								<li>Email: <span><a href="mailto:sales@iteuae.com">sales@iteuae.com</a></span></li>
 							</ul>
 						</div>
-						<div class="contact_info_section">
-							<div class="contact_info_title">Shippiing & Returns</div>
-							<ul>
-								<li>Phone: <span>+53 345 7953 3245</span></li>
-								<li>Email: <span>yourmail@gmail.com</span></li>
-							</ul>
-						</div>
-						<div class="contact_info_section">
-							<div class="contact_info_title">Information</div>
-							<ul>
-								<li>Phone: <span>+53 345 7953 3245</span></li>
-								<li>Email: <span>yourmail@gmail.com</span></li>
-							</ul>
-						</div>
+						
 					</div>
 				</div>
 			</div>
@@ -95,7 +59,7 @@ get_header(); ?>
 
 	<script>
     function google_maps_54994f694b31d() {
-        var latlng = new google.maps.LatLng(25.0826878,56.2876393);
+        var latlng = new google.maps.LatLng(25.082507,56.2890828);
         var myOptions = {zoom: 19, center: latlng, mapTypeId: google.maps.MapTypeId.ROADMAP, zoomControl: true, mapTypeControl: false, streetViewControl: false, scrollwheel: false};
         var map = new google.maps.Map(document.getElementById("google-map-area-54994f694b31d"), myOptions);
         var marker = new google.maps.Marker({
