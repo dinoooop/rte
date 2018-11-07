@@ -26,7 +26,13 @@ function sdt_theme_scripts() {
 	// Load our main stylesheet.
 	wp_enqueue_style( 'sublimedelux-style', get_stylesheet_uri() );
 	if(sdt_is_page("Products")){
-		wp_enqueue_style('sdt-product-style', SDT_THEME_URL . '/styles/product.css');
+        wp_enqueue_style('sdt-product-style', SDT_THEME_URL . '/styles/product.css');
+    }
+    if(sdt_is_page("Contact")){
+		wp_enqueue_style('sdt-contact-style', SDT_THEME_URL . '/styles/contact.css');
+        wp_enqueue_style('sdt-contact-responsive-style', SDT_THEME_URL . '/styles/contact_responsive.css');
+        wp_enqueue_script('sdt-contact-script', SDT_THEME_URL . '/js/contact.js', array('jquery'), null, true);
+        wp_enqueue_script('google-map', 'https://maps.googleapis.com/maps/api/js?sensor=false', array(), '1.0.0', true);
 	}
 	wp_enqueue_style('sdt-responsive-style', SDT_THEME_URL . '/styles/responsive.css');
 	wp_enqueue_style('sdt-dev-custom-style', SDT_THEME_URL . '/styles/dev-custom.css');
