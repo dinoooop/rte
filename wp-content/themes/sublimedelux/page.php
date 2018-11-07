@@ -1,7 +1,10 @@
 <?php get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<div class="sdt-page">
+		<div class="container">
+			
+			<div class="row">
+				<div class="col">
 
 		<?php
 		// Start the loop.
@@ -19,7 +22,10 @@
 		endwhile;
 		?>
 
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
+		
+				</div>
+			</div>
+		</div>
+	</div>
 
 <?php get_footer('page'); ?>

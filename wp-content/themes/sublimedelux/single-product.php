@@ -4,7 +4,7 @@ get_header(); ?>
 
 <!-- Product Details -->
 
-    <div class="product_details">
+    <div class="sdt-page">
         <div class="container">
         <?php
         // Start the loop.
@@ -24,7 +24,7 @@ get_header(); ?>
                 <!-- Product Content -->
                 <div class="col-lg-6">
                     <div class="details_content">
-                        <div class="details_name"><?php the_title(); ?></div>
+                        <h2 class="details_name"><?php the_title(); ?></h2>
 
                         <div class="details_text">
                             <?php the_content() ?>

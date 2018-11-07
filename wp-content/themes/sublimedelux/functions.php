@@ -93,3 +93,44 @@ function execute_test_page( $atts ) {
 	get_all_category();
 }
 add_shortcode( 'test_page', 'execute_test_page' );
+
+
+function sdt_get_custom_posts($post_arg) {
+
+    $post_arg_default = array(
+        'post_type' => 'post',
+        'posts_per_page' => 6,
+        'taxonomy' => '',
+        'terms' => '',
+    );
+
+    extract(shortcode_atts($post_arg_default, $post_arg));
+
+    $page = get_query_var('paged') ? get_query_var('paged') : 1;
+    $offset = ( $page - 1 ) * $posts_per_page;
+
+    if ($taxonomy == '' && $terms == '') {
+        $tax_query = array();
+    } else {
+        $tax_query = array(
+            array(
+                'taxonomy' => $taxonomy,
+                'field' => 'term_id',
+                'terms' => $terms
+            ),
+        );
+    }
+
+
+    $args = array(
+        'post_type' => $post_type,
+        'posts_per_page' => $posts_per_page,
+        'page' => $page,
+        'offset' => $offset,
+        'tax_query' => $tax_query
+    );
+
+    $the_query = new WP_Query($args);
+
+    return $the_query;
+}

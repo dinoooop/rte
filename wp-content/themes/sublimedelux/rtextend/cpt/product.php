@@ -26,7 +26,7 @@ function rtd_add_product_post_type() {
         'description' => __('Product in RTE', 'rtextend'),
         'labels' => $labels,
         'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
-        'taxonomies' => array('genres'),
+        'taxonomies' => array('pdtcat'),
         'hierarchical' => false,
         'public' => true,
         'show_ui' => true,
@@ -72,8 +72,8 @@ function rtd_product_taxonomy() {
         'show_ui' => true,
         'show_admin_column' => true,
         'query_var' => true,
-        'rewrite' => array('slug' => 'product-category'),
+        'rewrite' => array('slug' => 'pdtcat'),
     );
 
-    register_taxonomy('product_category', array('product'), $args);
+    register_taxonomy('pdtcat', array('product'), $args);
 }

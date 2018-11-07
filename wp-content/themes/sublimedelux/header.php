@@ -26,9 +26,9 @@
 									<li class="hassubs">
 										<a href="categories.html">Spare Parts</a>
 										<ul>
-											<li><a href="categories.html">Automotive</a></li>
-											<li><a href="categories.html">Heavy Equipment</a></li>
-											<li><a href="categories.html">Refrigeration</a></li>
+											<li><a href="<?php echo site_url('pdtcat/automotive') ?>">Automotive</a></li>
+											<li><a href="<?php echo site_url('pdtcat/heavy-equipment') ?>">Heavy Equipment</a></li>
+											<li><a href="<?php echo site_url('pdtcat/refrigeration') ?>">Refrigeration</a></li>
 										</ul>
 									</li>
 									<li><a href="<?php echo site_url("about")?>">About</a></li>
@@ -89,9 +89,9 @@
 					<li class="page_menu_item has-children menu_mm">
 						<a href="categories.html">Spare Parts<i class="fa fa-angle-down"></i></a>
 						<ul class="page_menu_selection menu_mm">
-							<li class="page_menu_item menu_mm"><a href="categories.html">Automotive<i class="fa fa-angle-down"></i></a></li>
-							<li class="page_menu_item menu_mm"><a href="categories.html">Heavy Equipment<i class="fa fa-angle-down"></i></a></li>
-							<li class="page_menu_item menu_mm"><a href="categories.html">Refrigeration<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="<?php echo site_url('pdtcat/automotive') ?>">Automotive<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="<?php echo site_url('pdtcat/heavy-equipment') ?>">Heavy Equipment<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="<?php echo site_url('pdtcat/refrigeration') ?>">Refrigeration<i class="fa fa-angle-down"></i></a></li>
 							
 						</ul>
 					</li>
@@ -122,5 +122,5 @@
 			</ul>
 		</div>
 	</div>
-	<div class="header_overlay"></div>
+	
 

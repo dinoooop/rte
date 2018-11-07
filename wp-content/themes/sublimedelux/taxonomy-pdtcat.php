@@ -1,11 +1,4 @@
-<?php
-/**
- *
- * Template Name: Product Template
- */
-get_header(); ?>
-
-
+<?php get_header(); ?>
 
 <div class="sdt-page">
 		<div class="container">
@@ -16,7 +9,17 @@ get_header(); ?>
 					<div class="product_grid">
 	
 					<?php 
-					$the_query = get_customposts(-1, 'product'); // for all post
+
+					$category = get_queried_object();
+					
+					$the_query = sdt_get_custom_posts([
+						'post_type' => 'product',
+				        'posts_per_page' => 50,
+				        'taxonomy' => 'pdtcat',
+    					'terms' => $category->term_id
+		    		]);
+			
+					
 					if ($the_query->have_posts()) :
 	                    while ($the_query->have_posts()) : $the_query->the_post(); $post_id = get_the_ID();
 	                        ?>
@@ -42,6 +45,4 @@ get_header(); ?>
 		</div>
 	</div>
 </div>
-	
-	
-<?php get_footer("page"); ?>
+<?php get_footer(); ?>
