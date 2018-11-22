@@ -81,8 +81,8 @@ function get_customposts($display_count, $post_type) {
     return $the_query;
 }
 
-function sdt_get_post_thumbnail($post_id){
-	$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post_id), 'medium' );
+function sdt_get_post_thumbnail($post_id, $size = 'medium'){
+	$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post_id), $size );
 	return isset($thumb['0'])? $thumb['0'] : '#';
 }
 

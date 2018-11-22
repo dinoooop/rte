@@ -16,7 +16,7 @@ get_header(); ?>
                 <!-- Product Image -->
                 <div class="col-lg-6">
                     <div class="details_image">
-                        <div class="details_image_large" style="background-image: url('<?php echo sdt_get_post_thumbnail($post_id); ?>')"></div>
+                        <div class="details_image_large" style="background-image: url('<?php echo sdt_get_post_thumbnail($post_id, 'full'); ?>')"></div>
                         
                     </div>
                 </div>
